@@ -10,7 +10,7 @@ def result_callback(result, output_image, timestamp_ms):
     global latest_result
     latest_result = result
 
-model_path = "../models/face_landmarker.task"
+model_path = "face_landmarker.task"
 
 #Tuodaan valmiit asetukset mallille
 BaseOptions = python.BaseOptions

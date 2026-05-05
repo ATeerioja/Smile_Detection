@@ -1,0 +1,29 @@
+import subprocess
+import sys
+import os
+import tkinter as tk
+
+def run_script(script_name):
+    #Avataan samaan Python prosessiin joku skripteistä
+    subprocess.Popen([sys.executable, script_name])
+
+#Luodaan ikkuna
+root = tk.Tk()
+root.title("Smile Detection Launcher")
+root.geometry("300x150")
+
+#Luodaan tekstit ja funktionaalisuus
+label = tk.Label(root, text="Choose mode:", font=("Arial", 14))
+label.pack(pady=10)
+
+btn_main = tk.Button(root, text="Run Main",
+                     command=lambda: run_script("face_detection.py"),
+                     width=20)
+btn_main.pack(pady=5)
+
+btn_debug = tk.Button(root, text="Run Debug",
+                      command=lambda: run_script("face_detection_debug.py"),
+                      width=20)
+btn_debug.pack(pady=5)
+
+root.mainloop()
