@@ -4,6 +4,9 @@ import mediapipe as mp
 from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 
+import sys
+import os
+
 latest_result = None
 
 def result_callback(result, output_image, timestamp_ms):
@@ -68,8 +71,8 @@ while True:
                 text = f"{name}: {score:.2f}"
                 cv2.putText(frame, text, (10, y),
                             cv2.FONT_HERSHEY_SIMPLEX,
-                            0.5, color, 1, cv2.LINE_AA)
-                y += 20
+                            0.8, color, 2, cv2.LINE_AA)
+                y += 30
 
         #Piirretään kasvojen pisteet
         if latest_result and latest_result.face_landmarks:

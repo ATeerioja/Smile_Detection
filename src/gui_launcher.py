@@ -4,15 +4,14 @@ import os
 import tkinter as tk
 
 def run_script(script_name):
-    #Avataan samaan Python prosessiin joku skripteistä
+    # Run the selected script using the same Python interpreter
     subprocess.Popen([sys.executable, script_name])
 
-#Luodaan ikkuna
+# Create window
 root = tk.Tk()
 root.title("Smile Detection Launcher")
 root.geometry("300x150")
 
-#Luodaan tekstit ja funktionaalisuus
 label = tk.Label(root, text="Choose mode:", font=("Arial", 14))
 label.pack(pady=10)
 

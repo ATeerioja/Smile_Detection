@@ -4,6 +4,9 @@ import mediapipe as mp
 from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 
+import sys
+import os
+
 latest_result = None
 
 def result_callback(result, output_image, timestamp_ms):
