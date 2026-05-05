@@ -3,11 +3,11 @@ import sys
 import os
 import tkinter as tk
 
+#Funktio, joka avaa scriptin
 def run_script(script_name):
-    # Run the selected script using the same Python interpreter
     subprocess.Popen([sys.executable, script_name])
 
-# Create window
+#Luo yksinkertaisen käyttöliittymän
 root = tk.Tk()
 root.title("Smile Detection Launcher")
 root.geometry("300x150")
